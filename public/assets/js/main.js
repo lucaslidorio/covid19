@@ -2,7 +2,8 @@
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 });
-//Função dinâmica para colocar mascara no campo de CPF e CNPJ conforme a quantidade de caracteres digitado
+//Função dinâmica para colocar mascara no campo de CPF e CNPJ conforme a quantidade
+//de caracteres digitado
 $("#documento").keydown(function(){
   try {
       $("#documento").unmask();
@@ -52,7 +53,7 @@ $(document).ready(function () {
     theme: "bootstrap",
     width: null
   });
-  //Inicia e traduz o plugin DataTables onde epossui a classe dataTables
+  //Inicia e traduz o plugin DataTables onde possui a classe dataTables
   $('.dataTables').DataTable(
     {
       //Tradução do dataTables
