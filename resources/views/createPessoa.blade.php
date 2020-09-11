@@ -18,8 +18,7 @@
                     {{$erro}}<br>
                 @endforeach
             </div>
-            @endif
-      
+            @endif      
         <form  name="formCad" id="formCad" method="post" action="{{ url('pessoas') }}">
             @csrf
             <div class="container container-fluid mt-2" id="containerFormulario">
