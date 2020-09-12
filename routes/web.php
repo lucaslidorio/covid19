@@ -13,16 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //Define as rotas infrações
-Route::resource('pessoas', 'PessoaController');//->middleware('auth');
+Route::resource('pessoas', 'PessoaController')->middleware('auth');
 //Define as rotas infrações
-Route::resource('infracoes', 'InfracaoAplicadaController');
+Route::resource('infracoes', 'InfracaoAplicadaController')->middleware('auth');
 
-;
+
+Route::get('login', function () {
+   return 'login';
+})->name('login');
+
 // Cria a  Rota /, apresenta a tela inicial
 Route::get('/', function(){
   return view('dashboard');
 });
 
-Auth::routes(['register'=> false]);
+Auth::routes( );
 
 Route::get('/home', 'HomeController@index')->name('home');
